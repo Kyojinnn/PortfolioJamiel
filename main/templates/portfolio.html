@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jamiel Briones | Portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon-box">
+                    {% load static %}
+                    <img src="{% static 'images/interests/sleep.png' %}" alt="Logo" class="logo-icon-img dark-mode-logo">
+                    <img src="{% static 'images/interests/gising.png' %}" alt="Logo" class="logo-icon-img light-mode-logo">
+                </div>
+                <span class="logo-text">Jamiel's Portfolio</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li>
+                    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hello I'm<br>
+                    <span class="hero-name">JAMIEL<br>BRIONES</span>
+                </h1>
+                <p class="hero-subtitle">I Am Into <span class="typed-text"></span><span class="cursor">|</span></p>            
+                <div class="social-links">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jamielbriones132@gmail.com" class="social-icon" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                    </a>
+                    <a href="https://github.com/Kyojinnn" class="social-icon" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/kyojinnn1" class="social-icon" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/kyojinnnnnnn/" class="social-icon" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+                
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-circle">
+                    {% load static %}
+                    <img src="{% static 'images/interests/Picture1.png' %}" alt="Jamiel Briones" class="profile-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-image">
+                        {% load static %}
+                        <img src="{% static 'images/interests/sleeping.png' %}" alt="Jamiel Briones" class="profile-image dark-mode-profile">
+                        <!-- Light Mode Image (okay.png) -->
+                        <img src="{% static 'images/interests/okay.png' %}" alt="Jamiel Briones" class="profile-image light-mode-profile">
+                    </div>
+                    <div class="about-text">
+                        <h3>Who is Jamiel?</h3>
+                        <p>Motivated and detail-oriented Full Stack Developer with foundational experience in frontend and backend development. Skilled in JavaScript, C++, Kotlin, React.js, HTML/CSS. Strong understanding of database management, logical reasoning, problem-solving, and time management.</p>
+                        <p>Able to build responsive user interfaces, develop server-side logic, and collaborate effectively to create functional and visually appealing digital solutions. Passionate about learning modern technologies and improving systems through clean, maintainable code.</p>
+                        <p>With a keen eye for detail and a commitment to excellence, I continuously seek opportunities to expand my skill set and contribute to innovative projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/html5.png' %}" alt="HTML5" class="skill-logo">
+                    <h3>HTML5</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/css.png' %}" alt="CSS" class="skill-logo">
+                    <h3>CSS</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/javascript.png' %}" alt="JavaScript" class="skill-logo">
+                    <h3>JavaScript</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/react.png' %}" alt="React" class="skill-logo">
+                    <h3>React</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/python.png' %}" alt="Python" class="skill-logo">
+                    <h3>Python</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/django.png' %}" alt="Django" class="skill-logo">
+                    <h3>Django</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/mysql.png' %}" alt="MySQL" class="skill-logo">
+                    <h3>MySQL</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/firebase.png' %}" alt="Firebase" class="skill-logo">
+                    <h3>Firebase</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/git.png' %}" alt="Github" class="skill-logo">
+                    <h3>Github</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/vscode.png' %}" alt="VS Code" class="skill-logo">
+                    <h3>VS Code</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/arduino.png' %}" alt="Arduino" class="skill-logo">
+                    <h3>Arduino</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/rpi.png' %}" alt="Raspberry Pi" class="skill-logo">
+                    <h3>Raspberry Pi</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/iot.png' %}" alt="IoT" class="skill-logo">
+                    <h3>IoT</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/cpp.png' %}" alt="C++" class="skill-logo">
+                    <h3>C++</h3>
+                </div>
+                <div class="skill-card">
+                    {% load static %}
+                    <img src="{% static 'images/skills/balsamiq.png' %}" alt="Balsamiq" class="skill-logo">
+                    <h3>Balsamiq</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Engineering Technology Major in Computer Engineering Technology</h3>
+                        <p class="timeline-date">2022 - Present</p>
+                        <p>Technological University of the Philippines - Cavite</p>
+                        <ul>
+                            <li>3rd Year Second Semester Dean's Lister</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Science, Technology, Engineering and Mathematics</h3>
+                        <p class="timeline-date">2020 - 2022</p>
+                        <p>Philippine Christian University - Cavite</p>
+                        <ul>
+                            <li>Consistent Honor Student</li>
+                            <li>Graduated with High Honor</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Junior High School</h3>
+                        <p class="timeline-date">2016 - 2020</p>
+                        <p>Luis Y. Ferrer, Jr. North National High School</p>
+                        <ul>
+                            <li>Consistent Honor Student</li>
+                            <li>Graduated with Honor</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Carousel Section -->
+    <section id="projects" class="featured-projects">
+        <div class="container-full">
+            <h2 class="section-title">Featured Projects</h2>
+            
+            <div class="carousel-wrapper">
+                <!-- Previous Button -->
+                <button class="carousel-nav prev" id="prevProject">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- Carousel Container -->
+                <div class="carousel-container">
+                    <div class="carousel-track" id="projectCarousel">
+                        
+                        <!-- Project 1: Arduino Robotic Arm -->
+                        <div class="featured-card active">
+                            <div class="featured-image">
+                                {% load static %}
+                                <video autoplay loop muted playsinline>
+                                    <source src="{% static 'images/projects/clawvideo.mp4' %}" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="featured-content">
+                                <h3>Arduino Robotic Arm</h3>
+                                <p>Developed a fully functional Arduino-powered robotic arm car capable of autonomously identifying, picking, and sorting objects based on color. The project utilizes servo motors for precise arm movement, an Arduino Uno R3 as the main controller, a TCS3200 color sensor for accurate color detection, and a 1602 LCD to display real-time status and operational feedback. This system demonstrates an integration of hardware and software, showcasing automated object manipulation, real-time decision-making, and efficient control logic in embedded systems.</p>
+                                <div class="featured-tags">
+                                    <span>Arduino</span>
+                                    <span>Servo Motors</span>
+                                    <span>C++</span>
+                                    <span>TCS3200</span>
+                                    <span>Robotics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 2: Pixel Box Wars -->
+                        <div class="featured-card">
+                            <div class="featured-image">
+                                <video autoplay loop muted playsinline>
+                                    <source src="{% static 'images/projects/pixelboxwars.mp4' %}" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="featured-content">
+                                <h3>Pixel Box Wars</h3>
+                                <p>A comprehensive library management portal with advanced OCR capabilities for document processing. Built with Django and integrated with Google Vision API for automated text extraction and cataloging.</p>
+                                <div class="featured-tags">
+                                    <span>Python</span>
+                                    <span>Pygame</span>
+                                    <span>Json</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 3: Supplier Ordering System -->
+                        <div class="featured-card">
+                            <div class="featured-image">
+                                <img src="{% static 'images/projects/supplierordering.png' %}" alt="Supplier Ordering System">
+                            </div>
+                            <div class="featured-content">
+                                <h3>Supplier Ordering System</h3>
+                                <p>A comprehensive web-based procurement management system designed to streamline supplier ordering processes. Features automated order tracking, inventory management, supplier database, and real-time order status monitoring. Simplifies the entire supply chain workflow from order placement to delivery confirmation with an intuitive dashboard for efficient business operations.</p>
+                                <div class="featured-tags">
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                    <span>JavaScript</span>
+                                    <span>Bootstrap</span>
+                                    <span>Inventory Management</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 4: PPMSCLUSTER4 -->
+                        <div class="featured-card">
+                            <div class="featured-image">
+                                <img src="{% static 'images/projects/ppmspicture.png' %}" alt="PPMSCLUSTER4">
+                            </div>
+                            <div class="featured-content">
+                                <h3>PPMSCLUSTER4</h3>
+                                <p>Innovation Centralized Preschooler Profiling and Monitoring System for Cluster 4 Health Centers in Imus City. An integrated healthcare management system featuring BMI Assessment Hardware and Temperature Reader for comprehensive preschooler health monitoring. Streamlines health data collection, analysis, and tracking across multiple health centers to improve pediatric healthcare delivery.</p>
+                                <div class="featured-tags">
+                                    <span>Python</span>
+                                    <span>Django</span>
+                                    <span>Hardware Integration</span>
+                                    <span>BMI Assessment</span>
+                                    <span>Healthcare System</span>
+                                    <span>IoT</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 5: HardStack Legends -->
+                        <div class="featured-card">
+                            <div class="featured-image">
+                                <video autoplay loop muted playsinline>
+                                    <source src="{% static 'images/projects/hardstackvideo.mp4' %}" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="featured-content">
+                                <h3>HardStack Legends</h3>
+                                <p>An interactive gaming platform featuring hardware integration and real-time multiplayer functionality. Built with Unity game engine and Arduino hardware integration for unique gameplay mechanics.</p>
+                                <div class="featured-tags">
+                                    <span>Unity</span>
+                                    <span>C#</span>
+                                    <span>Arduino</span>
+                                    <span>Game Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 6: Autonomous Firefighting Car -->
+                        <div class="featured-card">
+                            <div class="featured-image">
+                                <video autoplay loop muted playsinline>
+                                    <source src="{% static 'images/projects/firerobotvideo.mp4' %}" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="featured-content">
+                                <h3>Autonomous Firefighting Car</h3>
+                                <p>An intelligent robotic vehicle equipped with ultrasonic sensors for obstacle detection and flame sensors for firefighting capabilities. Features autonomous navigation and emergency response systems.</p>
+                                <div class="featured-tags">
+                                    <span>Arduino</span>
+                                    <span>IoT</span>
+                                    <span>Sensors</span>
+                                    <span>Autonomous Systems</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project 7: Veterinary Clinic System -->
+                        <div class="featured-card">
+                            <div class="featured-image">
+                                <video autoplay loop muted playsinline>
+                                    <source src="{% static 'images/projects/vetvdeo.mp4' %}" type="video/mp4">
+                                </video>
+                            </div>
+                            <div class="featured-content">
+                                <h3>Veterinary Clinic System</h3>
+                                <p>A complete management system for veterinary clinics featuring appointment scheduling, patient records management, inventory tracking, and integrated billing system with an intuitive user interface.</p>
+                                <div class="featured-tags">
+                                    <span>PHP</span>
+                                    <span>MySQL</span>
+                                    <span>Bootstrap</span>
+                                    <span>Web Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Next Button -->
+                <button class="carousel-nav next" id="nextProject">
+                    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators" id="carouselIndicators"></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Jamiel Briones. All rights reserved.</p>
+    </footer>
+
+    {% load static %}
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
