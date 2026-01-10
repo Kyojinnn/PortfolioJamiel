@@ -97,32 +97,6 @@ body.light-mode nav.scrolled {
     transform: scale(1.05);
 }
 
-.logo-icon {
-    width: 45px;
-    height: 45px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    font-size: 1.3rem;
-    font-weight: 700;
-    animation: logoGlow 3s ease-in-out infinite;
-    box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
-}
-
-@keyframes logoGlow {
-    0%, 100% {
-        transform: scale(1);
-        box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
-    }
-    50% {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
-    }
-}
-
 .logo-text {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -393,70 +367,11 @@ body.light-mode .social-icon {
     animation: fadeInUp 0.8s 0.8s ease both;
 }
 
-.image-circle {
-    width: 600px;
-    height: 600px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 20px 60px rgba(16, 185, 129, 0.3);
-    animation: float 6s ease-in-out infinite;
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
-    border: 10px solid rgba(16, 185, 129, 0.2);
-}
-
-body.light-mode .image-circle {
-    border-color: rgba(5, 150, 105, 0.3);
-}
-
-/* Profile Image Theme Switching */
-.profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-/* Dark Mode Profile (sleeping.png) - Visible by default */
-.dark-mode-profile {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-    z-index: 2;
-}
-
-/* Light Mode Profile (okay.png) - Hidden by default */
-.light-mode-profile {
-    opacity: 0;
-    transform: scale(0.9) rotate(-5deg);
-    z-index: 1;
-}
-
-/* When light mode is active */
-body.light-mode .dark-mode-profile {
-    opacity: 0;
-    transform: scale(0.9) rotate(5deg);
-    z-index: 1;
-}
-
-body.light-mode .light-mode-profile {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-    z-index: 2;
-}
-
-/* Updated image-circle to image-box for rectangular shape */
+/* Hero Image Circle - SINGLE DEFINITION */
 .image-circle {
     width: 500px;
-    height: 600px;
-    border-radius: 20px; /* Changed from 50% to 20px for rounded corners */
+    height: 500px;
+    border-radius: 50%;
     background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
     display: flex;
     align-items: center;
@@ -478,7 +393,7 @@ body.light-mode .image-circle {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px; /* Changed from 50% to match container */
+    border-radius: 50%;
     position: absolute;
     top: 0;
     left: 0;
@@ -510,21 +425,6 @@ body.light-mode .light-mode-profile {
     opacity: 1;
     transform: scale(1) rotate(0deg);
     z-index: 2;
-}
-
-/* Responsive adjustments for profile images */
-@media (max-width: 968px) {
-    .image-circle {
-        width: 350px;
-        height: 450px;
-    }
-}
-
-@media (max-width: 480px) {
-    .image-circle {
-        width: 280px;
-        height: 380px;
-    }
 }
 
 /* Sections */
@@ -587,7 +487,7 @@ section {
     border-color: var(--primary-color);
 }
 
-/* About Section Image Theme Switching */
+/* About Section Image */
 .about-image {
     width: 100%;
     height: 450px;
@@ -601,11 +501,6 @@ section {
     align-items: center;
     justify-content: center;
     background: var(--darker-bg);
-}
-
-/* Remove any circular styling from about photo */
-.about-image .about-photo {
-    border-radius: 0 !important;
 }
 
 .about-image:hover {
@@ -622,18 +517,24 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    border-radius: 0;
+    border-radius: 0 !important;
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Dark Mode About Image (sleeping.png) - Visible by default */
+/* Make sure about images are NOT circular */
+.about-image .about-photo,
+.about-image img {
+    border-radius: 0 !important;
+}
+
+/* Dark Mode About Image - Visible by default */
 .dark-mode-about {
     opacity: 1;
     transform: scale(1);
     z-index: 2;
 }
 
-/* Light Mode About Image (okay.png) - Hidden by default */
+/* Light Mode About Image - Hidden by default */
 .light-mode-about {
     opacity: 0;
     transform: scale(0.95);
@@ -651,16 +552,6 @@ body.light-mode .light-mode-about {
     opacity: 1;
     transform: scale(1);
     z-index: 2;
-}
-
-/* Responsive adjustments for about image */
-@media (max-width: 968px) {
-    .about-image {
-        width: 100%;
-        max-width: 350px;
-        height: 400px;
-        margin: 0 auto;
-    }
 }
 
 .about-text {
@@ -1194,22 +1085,6 @@ body.light-mode .light-mode-logo {
     }
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .logo-icon-box {
-        width: 40px;
-        height: 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo-icon-box {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-
 /* Responsive Design */
 @media (max-width: 1200px) {
     .featured-card {
@@ -1241,8 +1116,8 @@ body.light-mode .light-mode-logo {
     }
 
     .image-circle {
-        width: 300px;
-        height: 300px;
+        width: 350px;
+        height: 350px;
     }
 
     .social-links {
@@ -1305,6 +1180,11 @@ body.light-mode .light-mode-logo {
 }
 
 @media (max-width: 768px) {
+    .logo-icon-box {
+        width: 40px;
+        height: 40px;
+    }
+
     .nav-menu {
         gap: 1rem;
         font-size: 0.9rem;
@@ -1332,6 +1212,11 @@ body.light-mode .light-mode-logo {
 }
 
 @media (max-width: 480px) {
+    .logo-icon-box {
+        width: 35px;
+        height: 35px;
+    }
+
     .nav-container {
         padding: 1rem;
     }
