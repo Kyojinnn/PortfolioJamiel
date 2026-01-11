@@ -504,3 +504,105 @@ document.addEventListener('DOMContentLoaded', function() {
         firstCard.classList.add('active');
     }
 });
+
+
+// Add this to your existing script.js file or create a new script
+
+// Image toggle functionality for About section
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the dark mode profile image in the About section
+    const darkModeProfile = document.querySelector('.about-image .dark-mode-profile');
+    
+    if (darkModeProfile) {
+        // Track the current state
+        let isAwake = false;
+        
+        // Add click event listener
+        darkModeProfile.addEventListener('click', function() {
+            // Toggle between sleeping and okay images
+            if (!isAwake) {
+                // Change to okay.png (awake state)
+                this.src = this.src.replace('sleeping.png', 'mad.png');
+                isAwake = true;
+            } else {
+                // Change back to sleeping.png
+                this.src = this.src.replace('mad.png', 'sleeping.png');
+                isAwake = false;
+            }
+        });
+        
+        // Add cursor pointer style to indicate it's clickable
+        darkModeProfile.style.cursor = 'pointer';
+        
+        // Optional: Add hover effect
+        darkModeProfile.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        darkModeProfile.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    }
+});
+
+// Add this to your existing script.js file or create a new script
+
+// Image toggle functionality for About section
+document.addEventListener('DOMContentLoaded', function() {
+    // Get both profile images in the About section
+    const darkModeProfile = document.querySelector('.about-image .dark-mode-profile');
+    const lightModeProfile = document.querySelector('.about-image .light-mode-profile');
+    
+    // Dark mode image toggle (sleeping.png <-> okay.png)
+    if (darkModeProfile) {
+        let isAwake = false;
+        
+        darkModeProfile.addEventListener('click', function() {
+            if (!isAwake) {
+                this.src = this.src.replace('sleeping.png', 'okay.png');
+                isAwake = true;
+            } else {
+                this.src = this.src.replace('okay.png', 'sleeping.png');
+                isAwake = false;
+            }
+        });
+        
+        darkModeProfile.style.cursor = 'pointer';
+        
+        darkModeProfile.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        darkModeProfile.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    }
+    
+    // Light mode image toggle (okay.png <-> happy.png)
+    if (lightModeProfile) {
+        let isHappy = false;
+        
+        lightModeProfile.addEventListener('click', function() {
+            if (!isHappy) {
+                this.src = this.src.replace('okay.png', 'happy.png');
+                isHappy = true;
+            } else {
+                this.src = this.src.replace('happy.png', 'okay.png');
+                isHappy = false;
+            }
+        });
+        
+        lightModeProfile.style.cursor = 'pointer';
+        
+        lightModeProfile.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        lightModeProfile.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    }
+});
